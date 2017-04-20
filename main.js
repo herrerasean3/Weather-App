@@ -6,7 +6,14 @@ $(document).ready(function () {
     
     $('#submit').on('click', function(e) {
         let zip = $('#zip-code').val();
-        let cCode = $('#c-code').val();
+        let splitzip = zip.split("");
+        if (splitzip.length != 5) {
+            window.alert('Please enter a valid Zip Code');
+        } else {
+            let cCode = $('#c-code').val();
+        if (cCode === "") {
+            cCode = "us";
+        };
         let targetURL = "https://accesscontrolalloworiginall.herokuapp.com/" + "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + "," + cCode + "&units=imperial&appid=3ab6ed465bd21cbac1831230b5950cec";
         
         e.preventDefault();
@@ -15,7 +22,6 @@ $(document).ready(function () {
             type: "GET",
             url: targetURL
         }).done(function(res) {
-            
             $('#city').text(res.name)
             $('#c-temp').text(res.main.temp); $('#weather').text(res.weather[0].description);
             $('#max-temp').text(res.main.temp_max);
@@ -28,5 +34,7 @@ $(document).ready(function () {
                 $('#c-temp').removeClass('hot');
             }
         });
+        }
+        
     });
 });
