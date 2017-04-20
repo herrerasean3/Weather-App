@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Application</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <input required id="zip-code" type="text" name="zip-code" placeholder="Zip Code">
+    <input id="c-code" type="text" name="c-code" placeholder="Country Code">
+    <button id="submit">Submit</button>
+    
+    <ul>
+        <li>City Name: <span id="city"></span></li>
+        <li>Current Temperature: <span id="c-temp"></span></li>
+        <li>Weather Description: <span id="weather"></span></li>
+        <li>Min Temperature: <span id="min-temp"></span></li>
+        <li>Max Temperature: <span id="max-temp"></span></li>
+    </ul>
+    
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+</html>
