@@ -6,18 +6,20 @@
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <input required id="zip-code" type="text" name="zip-code" placeholder="Zip Code">
-    <input id="c-code" type="text" name="c-code" placeholder="Country Code">
-    <button id="submit">Submit</button>
+  <h1>Weather Application</h1>
+   <div id="container">
+        <input required id="zip-code" type="text" name="zip-code" placeholder="Zip Code">
+        <input id="c-code" type="text" name="c-code" placeholder="Country Code">
+        <button id="submit">Submit</button>
     
-    <ul>
-        <li>City Name: <span id="city"></span></li>
-        <li>Current Temperature: <span id="c-temp"></span></li>
-        <li>Weather Description: <span id="weather"></span></li>
-        <li>Min Temperature: <span id="min-temp"></span></li>
-        <li>Max Temperature: <span id="max-temp"></span></li>
-    </ul>
-    
+        <ul>
+            <li>City Name: <span id="city"></span></li>
+            <li>Current Temperature: <span id="c-temp"></span></li>
+            <li>Weather Description: <span id="weather"></span></li>
+            <li>Min Temperature: <span id="min-temp"></span></li>
+            <li>Max Temperature: <span id="max-temp"></span></li>
+        </ul>
+    </div>
     <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
