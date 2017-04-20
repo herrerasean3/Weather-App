@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('#submit').on('click', function(e) {
         let zip = $('#zip-code').val();
         let cCode = $('#c-code').val();
-        let targetURL = "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + "," + cCode + "&units=imperial&appid=3ab6ed465bd21cbac1831230b5950cec";
+        let targetURL = "https://accesscontrolalloworiginall.herokuapp.com/" + "http://api.openweathermap.org/data/2.5/weather?zip=" + zip + "," + cCode + "&units=imperial&appid=3ab6ed465bd21cbac1831230b5950cec";
         
         e.preventDefault();
         console.log('Retrieving data from Weather API.');
